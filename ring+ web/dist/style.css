@@ -1,0 +1,101 @@
+/* Base styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white;
+}
+
+/* Section styling */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.hero {
+  background: #000;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+/* Feature section */
+.feature {
+  background-color: #111;
+}
+
+/* Side-by-side layout */
+.feature-content.two-col {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left column for sticky image */
+.sticky-col {
+  flex: 1;
+  position: relative;
+}
+
+/* Sticky image */
+.sticky-img {
+  position: sticky;
+  top: 10vh;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Right column for text */
+.feature-text {
+  flex: 1;
+  max-width: 600px;
+  align-self: center;
+  z-index: 1;
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .feature-content.two-col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sticky-img {
+    position: relative;
+    top: auto;
+    max-height: 60vh;
+  }
+
+  .feature-text {
+    text-align: center;
+  }
+}
